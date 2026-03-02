@@ -26,8 +26,8 @@ export default function Navbar() {
             <Image
               src="/LogoWhite.png"
               alt="MAC Partners"
-              width={160}
-              height={40}
+              width={120}
+              height={30}
               priority
             />
           </a>
