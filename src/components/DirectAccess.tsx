@@ -1,19 +1,5 @@
+import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
-
-const teamMembers = [
-  {
-    name: "Tyler McDaniel",
-    role: "Managing Partner, MAC Insurance",
-    bio: "Built the agency\u2019s tech stack, marketing systems, and growth strategies from the ground up.",
-    initials: "TM",
-  },
-  {
-    name: "Jessica McDaniel",
-    role: "Partner, MAC Insurance",
-    bio: "Hands-on with agent development, sales strategy, and the day-to-day systems that drive results.",
-    initials: "JM",
-  },
-];
 
 export default function DirectAccess() {
   return (
@@ -34,7 +20,7 @@ export default function DirectAccess() {
           </p>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - text */}
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-bg-card p-8 sm:p-10">
@@ -51,29 +37,34 @@ export default function DirectAccess() {
             </div>
           </ScrollReveal>
 
-          {/* Right - team cards */}
-          <div className="space-y-6">
-            {teamMembers.map((member, i) => (
-              <ScrollReveal key={member.name} delay={i * 100}>
-                <div className="rounded-2xl border border-border bg-bg-card p-6 flex gap-5 items-start hover:border-border-hover transition-colors">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <span className="font-[family-name:var(--font-outfit)] text-lg font-bold text-primary">
-                      {member.initials}
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="font-[family-name:var(--font-outfit)] text-lg font-bold text-text-heading">
-                      {member.name}
-                    </h4>
-                    <p className="text-sm text-primary mb-2">{member.role}</p>
-                    <p className="text-sm text-text-muted leading-relaxed">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          {/* Right - Tyler & Jessica card */}
+          <ScrollReveal delay={100}>
+            <div className="rounded-2xl border border-border bg-bg-card overflow-hidden hover:border-border-hover transition-colors">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/tyler-jessica.jpg"
+                  alt="Tyler and Jessica McDaniel"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div className="p-6">
+                <h4 className="font-[family-name:var(--font-outfit)] text-xl font-bold text-text-heading">
+                  Tyler &amp; Jessica McDaniel
+                </h4>
+                <p className="text-sm text-primary mb-3">
+                  Managing Partners, MAC Insurance
+                </p>
+                <p className="text-sm text-text-muted leading-relaxed">
+                  Built the agency&apos;s tech stack, marketing systems, and
+                  growth strategies from the ground up. Hands-on with agent
+                  development, sales strategy, and the day-to-day systems that
+                  drive results.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
