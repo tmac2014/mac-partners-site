@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" fill="none">
-  <text x="0" y="38" font-family="system-ui, sans-serif" font-weight="800" font-size="42" fill="#2EC4A5">MAC</text>
-  <text x="118" y="38" font-family="system-ui, sans-serif" font-weight="600" font-size="28" letter-spacing="4" fill="#FFFFFF">PARTNERS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2EC4A5"/>
+      <stop offset="100%" stop-color="#4BA8A0"/>
+    </linearGradient>
+  </defs>
+  <!-- M -->
+  <path d="M0 48V8h6l18 24L42 8h6v40h-6V18L26 38h-4L6 18v30H0z" fill="url(#tealGrad)"/>
+  <!-- A -->
+  <path d="M64 48L82 8h6l18 40h-6.5L95 37H73l-4.5 11H64zm11.5-17h17L84 14.5 75.5 31z" fill="url(#tealGrad)"/>
+  <!-- C with arrow -->
+  <path d="M118 28c0-11.5 8.5-21 21-21 8 0 14 4 17.5 10l-5.5 3c-2.5-4-6.5-7-12-7-9 0-15 6.5-15 15s6 15 15 15c5.5 0 9.5-3 12-7h18l-8 8-8-8h-6.5c-3.5 6-10 10-17.5 10-12.5 0-21-9.5-21-15z" fill="url(#tealGrad)"/>
+  <!-- PARTNERS text -->
+  <text x="2" y="72" font-family="'Outfit', system-ui, sans-serif" font-weight="700" font-size="22" letter-spacing="8" fill="#FFFFFF">PARTNERS</text>
 </svg>
