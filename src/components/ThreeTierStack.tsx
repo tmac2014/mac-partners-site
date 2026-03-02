@@ -18,7 +18,7 @@ const tiers = [
     highlight: true,
   },
   {
-    name: "Christian Brindle | Everything Senior Insurance",
+    name: "Christian Brindle | ESI",
     tagline: "Upline Support",
     description:
       "Top-level training, resources, and heavy discounts from our upline.",
