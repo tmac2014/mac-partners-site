@@ -25,7 +25,7 @@ const tiers = [
     items: [
       { label: "Premier agent program" },
       { label: "Free access to Seven Figure University", href: "https://sevenfigureu.com/" },
-      { label: "Discounts on Lead Heroes leads", href: "https://leadheroes.com/" },
+      { label: "Discounted Lead Heroes leads", href: "https://leadheroes.com/" },
       { label: "Discounted VAs through Hire Heroes", href: "https://hireheroes.com/" },
       { label: "Weekly training from a multi-seven-figure agency builder" },
       { label: "Exclusive top producer trips" },
