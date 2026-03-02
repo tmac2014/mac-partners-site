@@ -47,7 +47,7 @@ export default function Hero() {
             {[
               { value: "$1,000+", label: "Per Client Revenue" },
               { value: "#1", label: "Local Google Ranking" },
-              { value: "24/7", label: "AI Caller Included" },
+              { value: "AI", label: "Caller Included" },
             ].map((stat) => (
               <div
                 key={stat.label}
