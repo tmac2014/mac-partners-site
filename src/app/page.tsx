@@ -22,7 +22,7 @@ export default function Home() {
           number="01"
           title="A Professional Website That Actually Ranks on Google"
           text="We rank #1 in our local market — and it brings us a steady flow of new clients every month at zero cost. It won't blow up your business overnight, but it's consistent and free once it's built. We build the same type of site for you — free."
-          badge="Free organic leads, every month, on autopilot"
+          badge="Rank on Google and attract clients organically"
           features={[
             "SEO optimized to rank in your local market",
             "Local business schema so Google understands your business",

@@ -7,26 +7,28 @@ const tiers = [
     description:
       "The tools and mentorship we built our agency on.",
     items: [
+      "Direct access to Tyler & Jessica",
       "Professional SEO-optimized website",
       "AI-powered caller system",
       "MACPartners.io CRM",
       "Pre-built email & SMS automations",
       "Cross-selling strategy training",
       "GBP & SEO domination training",
-      "Direct access to Tyler & Jessica",
     ],
     highlight: true,
   },
   {
-    name: "Seven Figure Agency",
+    name: "Christian Brindle's Team",
     tagline: "Upline Support",
     description:
-      "Top-level training and mentorship from our upline.",
+      "Top-level training, resources, and heavy discounts from our upline.",
     items: [
-      "Seven Figure University",
-      "Dedicated agent support team",
-      "Lead purchasing options",
-      "VA support (discounted rates)",
+      "Free access to Seven Figure University",
+      "Free access to Seven Figure CRM",
+      "Heavy discounts on Lead Heroes leads & marketing",
+      "Discounted VAs through Hire Heroes",
+      "Weekly training from a multi-seven-figure agency builder",
+      "Dedicated support, mentorship & transparency",
       "Premier agent program",
     ],
     highlight: false,
@@ -82,11 +84,6 @@ export default function ThreeTierStack() {
                     : "border-border bg-bg-card"
                 } hover:border-border-hover transition-colors`}
               >
-                {tier.highlight && (
-                  <span className="inline-block self-start rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-semibold text-primary mb-4">
-                    Core
-                  </span>
-                )}
                 <h3 className="font-[family-name:var(--font-outfit)] text-xl font-bold text-text-heading">
                   {tier.name}
                 </h3>
