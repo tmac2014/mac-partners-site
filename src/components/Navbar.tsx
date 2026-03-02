@@ -30,9 +30,7 @@ export default function Navbar() {
             </span>
           </a>
           <a
-            href="https://link.macinsurance.org/widget/booking/s4Z67SgUiYKhJhkxZF3e"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/apply"
             className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-bg transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(46,196,165,0.3)]"
           >
             Apply Now

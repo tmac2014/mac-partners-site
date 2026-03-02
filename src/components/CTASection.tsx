@@ -21,9 +21,7 @@ export default function CTASection() {
 
         <ScrollReveal delay={200}>
           <a
-            href="https://link.macinsurance.org/widget/booking/s4Z67SgUiYKhJhkxZF3e"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/apply"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-10 py-4 text-lg font-bold text-bg transition-all hover:brightness-110 hover:shadow-[0_0_40px_rgba(46,196,165,0.4)] hover:-translate-y-0.5"
           >
             Apply Now

@@ -30,9 +30,7 @@ export default function Hero() {
 
         <ScrollReveal delay={300}>
           <a
-            href="https://link.macinsurance.org/widget/booking/s4Z67SgUiYKhJhkxZF3e"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/apply"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-bold text-bg transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(46,196,165,0.4)] hover:-translate-y-0.5"
           >
             Apply to Join MAC Partners
