@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { events } from "@/lib/analytics";
 
 type Step = "questions" | "qualified" | "not-qualified";
 
@@ -100,7 +101,9 @@ export default function ApplyPage() {
       setCurrentQ(currentQ + 1);
     } else {
       // All questions answered
-      setStep(isQualified(updated) ? "qualified" : "not-qualified");
+      const result = isQualified(updated) ? "qualified" : "not-qualified";
+      events.quizComplete(result);
+      setStep(result);
     }
   }
 
@@ -190,6 +193,7 @@ export default function ApplyPage() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => events.clickBookCall()}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-lg font-bold text-bg transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(46,196,165,0.4)] hover:-translate-y-0.5"
             >
               Book Your Call
