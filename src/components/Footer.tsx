@@ -5,17 +5,28 @@ export default function Footer() {
         <p className="text-sm text-text-muted">
           &copy; {new Date().getFullYear()} MAC Partners. All rights reserved.
         </p>
-        <p className="text-sm text-text-muted">
-          A division of{" "}
+        <div className="flex items-center gap-4 text-sm text-text-muted">
+          <p>
+            A division of{" "}
+            <a
+              href="https://macinsurance.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              MAC Insurance
+            </a>
+          </p>
+          <span className="hidden sm:inline">·</span>
           <a
-            href="https://macinsurance.org"
+            href="https://macinsurance.org/privacy-policy"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline"
+            className="hover:text-primary transition-colors"
           >
-            MAC Insurance
+            Privacy Policy
           </a>
-        </p>
+        </div>
       </div>
     </footer>
   );

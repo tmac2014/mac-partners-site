@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import TrackedApplyLink from "./TrackedApplyLink";
 
 export default function CTASection() {
   return (
@@ -20,15 +21,15 @@ export default function CTASection() {
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
-          <a
-            href="/apply"
+          <TrackedApplyLink
+            location="cta_bottom"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-10 py-4 text-lg font-bold text-bg transition-all hover:brightness-110 hover:shadow-[0_0_40px_rgba(46,196,165,0.4)] hover:-translate-y-0.5"
           >
             Apply Now
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </TrackedApplyLink>
         </ScrollReveal>
       </div>
     </section>

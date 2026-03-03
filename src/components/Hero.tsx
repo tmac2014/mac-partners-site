@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import TrackedApplyLink from "./TrackedApplyLink";
 
 export default function Hero() {
   return (
@@ -30,15 +31,15 @@ export default function Hero() {
         </ScrollReveal>
 
         <ScrollReveal delay={300}>
-          <a
-            href="/apply"
+          <TrackedApplyLink
+            location="hero"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-bold text-bg transition-all hover:brightness-110 hover:shadow-[0_0_30px_rgba(46,196,165,0.4)] hover:-translate-y-0.5"
           >
             Apply to Join MAC Partners
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </TrackedApplyLink>
         </ScrollReveal>
 
         {/* Stats */}
