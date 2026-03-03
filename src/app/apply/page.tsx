@@ -109,13 +109,8 @@ export default function ApplyPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
       {/* Logo */}
-      <a href="/" className="flex items-baseline gap-2.5 mb-12">
-        <span className="font-[family-name:var(--font-outfit)] text-2xl font-extrabold tracking-tight text-primary">
-          MAC
-        </span>
-        <span className="font-[family-name:var(--font-outfit)] text-sm font-bold tracking-[0.25em] text-white">
-          PARTNERS
-        </span>
+      <a href="/" className="mb-12">
+        <img src="/LogoWhite.png" alt="MAC Partners" className="h-16" />
       </a>
 
       <div className="w-full max-w-xl">
