@@ -69,27 +69,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      {GA_ID && (
-        <head>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('consent', 'default', {
-                analytics_storage: 'granted'
-              });
-              gtag('config', '${GA_ID}');
-            `}
-          </Script>
-        </head>
-      )}
+      <head>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {GA_ID && (
+          <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        )}
+      </head>
       <body className={`${outfit.variable} ${dmSans.variable} antialiased`}>
         {children}
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="lazyOnload"
+            />
+            <Script id="google-analytics" strategy="lazyOnload">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{analytics_storage:'granted'});gtag('config','${GA_ID}');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );

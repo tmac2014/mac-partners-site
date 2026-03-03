@@ -7,10 +7,12 @@ import ThreeTierStack from "@/components/ThreeTierStack";
 import HowItWorks from "@/components/HowItWorks";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import ScrollRevealInit from "@/components/ScrollRevealInit";
 
 export default function Home() {
   return (
     <>
+      <ScrollRevealInit />
       <Navbar />
       <main>
         <Hero />

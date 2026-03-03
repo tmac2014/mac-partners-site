@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { events } from "@/lib/analytics";
 
 type Step = "questions" | "qualified" | "not-qualified";
@@ -113,7 +114,7 @@ export default function ApplyPage() {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
       {/* Logo */}
       <a href="/" className="mb-12">
-        <img src="/LogoWhite.png" alt="MAC Partners" className="h-16" />
+        <Image src="/LogoWhite.png" alt="MAC Partners" width={160} height={107} className="h-16 w-auto" priority />
       </a>
 
       <div className="w-full max-w-xl">
