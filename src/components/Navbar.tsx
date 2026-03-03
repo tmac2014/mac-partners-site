@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +23,13 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <a href="#">
-            <img src="/LogoWhite.png" alt="MAC Partners" className="h-10" />
+            <Image
+              src="/LogoWhite.png"
+              alt="MAC Partners"
+              width={120}
+              height={30}
+              priority
+            />
           </a>
           <a
             href="/apply"

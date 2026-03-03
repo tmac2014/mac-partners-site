@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git pull)",
+      "Bash(git pull origin main)",
+      "Bash(git fetch origin)",
+      "Bash(git merge origin/main)",
+      "Bash(git push -u origin claude/gallant-cray)",
+      "Bash(gh pr:*)",
+      "Bash(git checkout origin/master -- public/LogoBlack.png public/LogoWhite.png)",
+      "Bash(git ls-tree --name-only -r origin/master)"
+    ]
+  }
+}

@@ -7,27 +7,28 @@ const tiers = [
     description:
       "The tools and mentorship we built our agency on.",
     items: [
-      "Professional SEO-optimized website",
-      "AI-powered caller system",
-      "MACPartners.io CRM",
-      "Pre-built email & SMS automations",
-      "Cross-selling strategy training",
-      "GBP & SEO domination training",
-      "Direct access to Tyler & Jessica",
+      { label: "Direct access to Tyler & Jessica" },
+      { label: "Professional SEO-optimized website" },
+      { label: "AI-powered caller system" },
+      { label: "MACPartners.io CRM" },
+      { label: "Pre-built email & SMS automations" },
+      { label: "Cross-selling strategy training" },
+      { label: "GBP & SEO domination training" },
     ],
     highlight: true,
   },
   {
-    name: "Seven Figure Agency",
+    name: "Christian Brindle | ESI",
     tagline: "Upline Support",
     description:
-      "Top-level training and mentorship from our upline.",
+      "Top-level training, resources, and heavy discounts from our upline.",
     items: [
-      "Seven Figure University",
-      "Dedicated agent support team",
-      "Lead purchasing options",
-      "VA support (discounted rates)",
-      "Premier agent program",
+      { label: "Premier agent program" },
+      { label: "Free access to Seven Figure University", href: "https://sevenfigureu.com/" },
+      { label: "Discounted Lead Heroes leads", href: "https://leadheroes.com/" },
+      { label: "Discounted VAs through Hire Heroes", href: "https://hireheroes.com/" },
+      { label: "Weekly training from a multi-seven-figure agency builder" },
+      { label: "Exclusive top producer trips" },
     ],
     highlight: false,
   },
@@ -37,15 +38,15 @@ const tiers = [
     description:
       "Industry-leading tech, carriers, and resources.",
     items: [
-      "IntegrityCONNECT platform",
-      "MedicareCENTER",
-      "Sunfire enrollment",
-      "Connecture plan comparison",
-      "CSG Medigap quoting",
-      "Integrity Leads",
-      "Top-level commissions",
-      "E&O discounts up to 50%",
-      "Exclusive carrier access & bonuses",
+      { label: "IntegrityCONNECT platform" },
+      { label: "MedicareCENTER" },
+      { label: "Sunfire enrollment" },
+      { label: "Connecture plan comparison" },
+      { label: "CSG Medigap quoting" },
+      { label: "Integrity Leads" },
+      { label: "Top-level commissions" },
+      { label: "E&O discounts up to 50%" },
+      { label: "Exclusive carrier access & bonuses" },
     ],
     highlight: false,
   },
@@ -76,16 +77,18 @@ export default function ThreeTierStack() {
           {tiers.map((tier, i) => (
             <ScrollReveal key={tier.name} delay={i * 100}>
               <div
-                className={`rounded-2xl border p-8 h-full flex flex-col ${
+                className={`relative rounded-2xl border p-8 h-full flex flex-col transition-all duration-300 ease-out ${
                   tier.highlight
-                    ? "border-primary/40 bg-bg-card shadow-[0_0_40px_rgba(46,196,165,0.08)]"
-                    : "border-border bg-bg-card"
-                } hover:border-border-hover transition-colors`}
+                    ? "border-primary/40 bg-bg-card shadow-[0_0_40px_rgba(46,196,165,0.08)] hover:shadow-[0_0_60px_rgba(46,196,165,0.15)] hover:-translate-y-1"
+                    : "border-border bg-bg-card hover:shadow-[0_0_30px_rgba(46,196,165,0.06)] hover:-translate-y-1"
+                } hover:border-border-hover`}
               >
                 {tier.highlight && (
-                  <span className="inline-block self-start rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-semibold text-primary mb-4">
-                    Core
-                  </span>
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="inline-block bg-primary text-[#0A0F14] text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-[0_0_20px_rgba(46,196,165,0.3)]">
+                      Your Team
+                    </span>
+                  </div>
                 )}
                 <h3 className="font-[family-name:var(--font-outfit)] text-xl font-bold text-text-heading">
                   {tier.name}
@@ -96,7 +99,7 @@ export default function ThreeTierStack() {
                 </p>
                 <ul className="space-y-3 mt-auto">
                   {tier.items.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
+                    <li key={item.label} className="flex items-start gap-3">
                       <svg
                         className="w-4 h-4 text-primary flex-shrink-0 mt-0.5"
                         fill="none"
@@ -110,7 +113,31 @@ export default function ThreeTierStack() {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="text-sm text-text-muted">{item}</span>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-primary hover:underline inline-flex items-center gap-1"
+                        >
+                          {item.label}
+                          <svg
+                            className="w-3 h-3 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
+                          </svg>
+                        </a>
+                      ) : (
+                        <span className="text-sm text-text-muted">{item.label}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
